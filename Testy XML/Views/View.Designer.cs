@@ -27,7 +27,6 @@
             this.button_SaveTest = new System.Windows.Forms.Button();
             this.button_LoadTest = new System.Windows.Forms.Button();
             this.button_AddQuestion = new System.Windows.Forms.Button();
-            this.newQuestion = new Testy_XML.NewQuestion();
             this.groupBoxProperties = new System.Windows.Forms.GroupBox();
             this.labelName = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
@@ -39,6 +38,7 @@
             this.textBoxLevel = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.listBox_Questions = new System.Windows.Forms.ListBox();
+            this.newQuestion1 = new Testy_XML.NewQuestion();
             this.panel1.SuspendLayout();
             this.groupBoxProperties.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -46,32 +46,33 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.newQuestion1);
             this.panel1.Controls.Add(this.button_SaveTest);
             this.panel1.Controls.Add(this.button_LoadTest);
             this.panel1.Controls.Add(this.button_AddQuestion);
-            this.panel1.Controls.Add(this.newQuestion);
             this.panel1.Controls.Add(this.groupBoxProperties);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.listBox_Questions);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(488, 359);
+            this.panel1.Size = new System.Drawing.Size(547, 359);
             this.panel1.TabIndex = 0;
             // 
             // button_SaveTest
             // 
-            this.button_SaveTest.Location = new System.Drawing.Point(319, 262);
+            this.button_SaveTest.Location = new System.Drawing.Point(335, 262);
             this.button_SaveTest.Name = "button_SaveTest";
-            this.button_SaveTest.Size = new System.Drawing.Size(71, 66);
+            this.button_SaveTest.Size = new System.Drawing.Size(95, 66);
             this.button_SaveTest.TabIndex = 21;
             this.button_SaveTest.Text = "Save test";
             this.button_SaveTest.UseVisualStyleBackColor = true;
+            this.button_SaveTest.Click += new System.EventHandler(this.Button_SaveTest_Click);
             // 
             // button_LoadTest
             // 
-            this.button_LoadTest.Location = new System.Drawing.Point(405, 262);
+            this.button_LoadTest.Location = new System.Drawing.Point(436, 262);
             this.button_LoadTest.Name = "button_LoadTest";
-            this.button_LoadTest.Size = new System.Drawing.Size(71, 66);
+            this.button_LoadTest.Size = new System.Drawing.Size(95, 66);
             this.button_LoadTest.TabIndex = 20;
             this.button_LoadTest.Text = "Load test";
             this.button_LoadTest.UseVisualStyleBackColor = true;
@@ -80,19 +81,11 @@
             // 
             this.button_AddQuestion.Location = new System.Drawing.Point(231, 262);
             this.button_AddQuestion.Name = "button_AddQuestion";
-            this.button_AddQuestion.Size = new System.Drawing.Size(71, 66);
+            this.button_AddQuestion.Size = new System.Drawing.Size(95, 66);
             this.button_AddQuestion.TabIndex = 19;
             this.button_AddQuestion.Text = "Add question";
             this.button_AddQuestion.UseVisualStyleBackColor = true;
-            // 
-            // newQuestion
-            // 
-            this.newQuestion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.newQuestion.Location = new System.Drawing.Point(231, 14);
-            this.newQuestion.Margin = new System.Windows.Forms.Padding(2);
-            this.newQuestion.Name = "newQuestion";
-            this.newQuestion.Size = new System.Drawing.Size(245, 231);
-            this.newQuestion.TabIndex = 18;
+            this.button_AddQuestion.Click += new System.EventHandler(this.Button_AddQuestion_Click);
             // 
             // groupBoxProperties
             // 
@@ -209,12 +202,22 @@
             this.listBox_Questions.Name = "listBox_Questions";
             this.listBox_Questions.Size = new System.Drawing.Size(198, 186);
             this.listBox_Questions.TabIndex = 15;
+            this.listBox_Questions.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListBox_Questions_MouseDoubleClick);
+            // 
+            // newQuestion1
+            // 
+            this.newQuestion1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.newQuestion1.Location = new System.Drawing.Point(231, 14);
+            this.newQuestion1.Margin = new System.Windows.Forms.Padding(2);
+            this.newQuestion1.Name = "newQuestion1";
+            this.newQuestion1.Size = new System.Drawing.Size(300, 231);
+            this.newQuestion1.TabIndex = 22;
             // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 383);
+            this.ClientSize = new System.Drawing.Size(573, 383);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "View";
@@ -234,7 +237,6 @@
         private System.Windows.Forms.Button button_SaveTest;
         private System.Windows.Forms.Button button_LoadTest;
         private System.Windows.Forms.Button button_AddQuestion;
-        private NewQuestion newQuestion;
         private System.Windows.Forms.GroupBox groupBoxProperties;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.TextBox textBoxName;
@@ -246,6 +248,7 @@
         private System.Windows.Forms.TextBox textBoxLevel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox_Questions;
+        private NewQuestion newQuestion1;
     }
 }
 

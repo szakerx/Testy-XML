@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Testy_XML {
     class Question {
-        private readonly string Name;
-        private List<Answer> Answers;
+        public string Name { get; set; }
+        public List<Answer> Answers { get; set; }
         public Question(string name, List<Answer> answers) {
             Name = name;
             Answers = answers;

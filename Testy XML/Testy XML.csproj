@@ -46,26 +46,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Answer.cs" />
-    <Compile Include="NewQuestion.cs">
+    <Compile Include="Interfaces\INewQuestionView.cs" />
+    <Compile Include="Interfaces\IView.cs" />
+    <Compile Include="Models\Answer.cs" />
+    <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\Test.cs" />
+    <Compile Include="Presenters\NewQuestionPresenter.cs" />
+    <Compile Include="Presenters\ViewPresenter.cs" />
+    <Compile Include="Views\NewQuestionView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NewQuestion.Designer.cs">
-      <DependentUpon>NewQuestion.cs</DependentUpon>
+    <Compile Include="Views\NewQuestionView.Designer.cs">
+      <DependentUpon>NewQuestionView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View.cs">
+    <Compile Include="Views\View.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View.Designer.cs">
+    <Compile Include="Views\View.Designer.cs">
       <DependentUpon>View.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Question.cs" />
-    <EmbeddedResource Include="NewQuestion.resx">
-      <DependentUpon>NewQuestion.cs</DependentUpon>
+    <Compile Include="Models\Question.cs" />
+    <EmbeddedResource Include="Views\NewQuestionView.resx">
+      <DependentUpon>NewQuestionView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View.resx">
+    <EmbeddedResource Include="Views\View.resx">
       <DependentUpon>View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -90,5 +96,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
